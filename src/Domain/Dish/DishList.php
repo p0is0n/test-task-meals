@@ -24,6 +24,18 @@ class DishList
         return $this->dishes;
     }
 
+    /**
+     * @return Dish
+     */
+    public function getDishById(int $dishId): Dish
+    {
+        foreach ($this->dishes as $dish) {
+            if ($dish->getId() === $dishId) {
+                return $dish;
+            }
+        }
+    }
+
     public function hasDish(Dish $needle): bool
     {
         foreach ($this->dishes as $dish) {
