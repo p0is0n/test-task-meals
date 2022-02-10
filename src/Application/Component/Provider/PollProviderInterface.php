@@ -8,11 +8,13 @@ use Meals\Domain\Dish\Dish;
 use Meals\Domain\Employee\Employee;
 use Meals\Domain\Poll\Poll;
 use Meals\Domain\Poll\PollList;
-use Meals\Domain\Poll\PollResult;
+use Meals\Domain\Poll\PollWorkingHours;
 
 interface PollProviderInterface
 {
     public function getActivePolls(): PollList;
 
     public function getPoll(int $pollId): Poll;
+
+    public function getPollWorkingHours(): PollWorkingHours;
 }
